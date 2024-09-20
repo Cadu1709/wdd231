@@ -1,0 +1,96 @@
+@media screen and (min-width: 1300px)
+{
+    :root {
+        --dark-text: #63585E;
+        --light-text: white;
+        --headers: #C4E7D4;
+        --buttons: #7F6191;
+        --background: #F3F4FA;
+        --nav: #084B83;
+      }
+
+    header {
+        width: 80vw;
+    }
+    #menu {
+        display: none;
+      }
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--nav);
+        grid-column: 1/4;
+    }
+
+    nav a {
+        color: var(--light-text);
+        display: block;
+        padding: 10px;
+        margin: 0;
+        
+    }
+
+    a:hover {
+        background-color: #0b6cbc;
+    }
+
+    #header-img img {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    main {
+        width: 70vw;
+        display: grid;
+        grid-template-columns: 600px 300px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    #cwork-box, #place-box, #certificate-box {
+        border: .8px solid var(--dark-text);
+        margin-top: 15px;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    #cwork-box {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 600px;
+        height: 300px;
+        justify-self: end;
+    }
+
+    #cwork-box ul{
+        width: 550px;
+    }
+
+    #cwork-box h2 {
+        margin: 0;
+    }
+
+    #place-box {
+        grid-column: 2/4;
+        grid-row: 1/2;
+        width: 300px;
+        height: 300px;
+        justify-self: start;
+    }
+    #certificate-box {
+        width: 953px;
+        height: 220px;
+    }
+    #courses {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    footer {
+        width: 80vw;
+    }
+}
