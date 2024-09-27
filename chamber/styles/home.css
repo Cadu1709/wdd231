@@ -1,0 +1,106 @@
+/*creating css for the main to take effect for all elements in the pages.
+*/
+
+main {
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+/*call to action css*/
+.cta {
+    display: flex;
+    margin: 10px 10px;
+    padding: 20px;
+}
+.cta h2 {
+    margin: 30px;
+    
+}
+.cta p {
+    flex: 1;
+    margin: 0.5rem 0;
+    padding: 10px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+button {
+   padding: 12px;
+   margin: 10px;
+   border: 2px solid grey;
+   border-radius: 20px;
+   background-color: blanchedalmond;
+   color: blue;
+   font-weight: bold;
+}
+button:hover {
+    background-color: grey;
+    color: white;
+}
+/*updates section css, this section includes the events and weather div*/
+.update {
+    display: flex;
+    padding: 20px;
+    margin: 10px 10px;
+}
+.events {
+    gap: 0.5rem;
+    padding: 20px;
+    width: 68%;
+    height: 600px;
+    overflow-y: scroll; /*set height, so user can scroll more events.*/
+    padding-right: 1rem;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.event {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.weather {
+    width: 30%;
+    margin-left: 20px;/*this puts osme space in between the current weather div and events div*/
+    gap: 0.5rem;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/*css for the 3 day forecast div created in Javascript*/
+#forecast {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.forecast-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 150px;
+}
+.forecast-card img {
+    width: 50px;
+    height: 50px;
+}
+.events, .weather {
+    flex: 1 1 calc(60% - 30px); /*this aligns items in a flex container so they are side by side.*/
+}
+/*css for the last container*/
+.spotlights {
+    display: block;
+    width: 100%;
+}
+.spotlights h4  {
+    text-align: center;
+    margin-left: 300px;
+}

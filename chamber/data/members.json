@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Natura Cosméticos",
+    "address": "Av. Alexandre Colares, 1188, São Paulo, SP",
+    "phone": "+55 11 4446-9000",
+    "website": "https://www.natura.com.br/",
+    "image": "natura.webp",
+    "membershipLevel": "Gold",
+    "description": "Leader in sustainability and innovation in the cosmetics sector."
+  },
+  {
+    "name": "Magazine Luiza",
+    "address": "Rua Amazonas da Silva, 27, São Paulo, SP",
+    "phone": "+55 11 3508-9900",
+    "website": "https://www.magazineluiza.com.br/",
+    "image": "magazine-luiza.webp",
+    "membershipLevel": "Silver",
+    "description": "One of Brazil's largest retail chains with a strong online presence."
+  },
+  {
+    "name": "Ambev",
+    "address": "Rua Dr. Renato Paes de Barros, 1017, São Paulo, SP",
+    "phone": "+55 11 2122-1500",
+    "website": "https://www.ambev.com.br/",
+    "image": "ambev.webp",
+    "membershipLevel": "Bronze",
+    "description": "Leader in the beverage market with a focus on sustainability and innovation."
+  },
+  {
+    "name": "Porto Seguro",
+    "address": "Av. Rio Branco, 1489, São Paulo, SP",
+    "phone": "+55 11 3366-2000",
+    "website": "https://www.portoseguro.com.br/",
+    "image": "porto-seguro.webp",
+    "membershipLevel": "Gold",
+    "description": "Securing the future with insurance solutions and technology."
+  },
+  {
+    "name": "Mercado Livre",
+    "address": "Av. das Nações Unidas, 3003, São Paulo, SP",
+    "phone": "+55 11 3894-9200",
+    "website": "https://www.mercadolivre.com.br/",
+    "image": "mercado-livre.webp",
+    "membershipLevel": "Silver",
+    "description": "The largest marketplace in Latin America, facilitating digital commerce."
+  },
+  {
+    "name": "BRF S.A.",
+    "address": "Av. das Nações Unidas, 8501, São Paulo, SP",
+    "phone": "+55 11 4341-5000",
+    "website": "https://www.brf-global.com/",
+    "image": "brf.webp",
+    "membershipLevel": "Bronze",
+    "description": "A global reference in high-quality food production."
+  },
+  {
+    "name": "Embraer",
+    "address": "Av. Brigadeiro Faria Lima, 2170, São Paulo, SP",
+    "phone": "+55 11 3040-5000",
+    "website": "https://www.embraer.com.br/",
+    "image": "embraer.webp",
+    "membershipLevel": "Gold",
+    "description": "Innovative in the aerospace sector with cutting-edge technology."
+  }
+]

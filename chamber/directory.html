@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title content=" São Paulo Chamber of Commerce">São Paulo Chamber of Commerce</title>
+    <meta name="author" content="Carlos Silva">
+    <meta name="description" content="Carlos Silva, Chamber of commerce">
+    <meta property="og:image" content="https://www.cadu1709.github.io/wdd231/chamber/images/chamber-hero.webp/">
+    <meta property="og:url" content="https://cadu1709.github.io/wdd231/chamber/directory">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Carlos Silva, WDD 231 - Directory">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamber-small.css">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/directory.js"></script>
+</head>
+    <body>
+        <header>
+            <div class="profile">
+                <img src="images/chamberlogo.webp" loading="lazy" alt="chamberlogo" width="240" height="240">
+            </div>
+            <div class="header-title">
+                <h1>São Paulo Chamber of Commerce</h1>
+            </div>
+            <div class="menu">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="index.html"> Home </a></li>
+                        <li><a href="#members" class="active">Directory</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="hero-container">
+            <picture>
+                <source srcset="images/chamber-hero.webp" media="(min-width: 1000px)">
+                <source srcset="images/chamber-hero-medium.webp" media="(min-width: 500px)">
+                <img src="images/chamber-hero-small.webp" loading="lazy" alt="SãoPauloChamberofCommerce" width="500" height="250" >
+            </picture>
+        </div>
+        <section class="home">
+            <h2>Home</h2>
+        </section>
+        <main class="directory">
+            <section class="updates">
+                <div class="events">
+                    <h3> Events</h3>
+                </div>
+            </section>
+
+            <section class="weatherd">
+                <div class="current">
+                    <h3>Current Weather</h3>
+                    <div id="currentweather">
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="forecastd">
+                <div class="details">
+                    <h3> Weather Forecast</h3>
+                    
+                </div>
+            </section>
+            
+        </main>
+        <button id="toggleview">Click To Toggle View</button>
+        <div id="members" class="grid-view">
+            
+        </div>
+        <footer>
+            <div class="footer-left">
+                <h4>São Paulo Chamber of Commerce</h4>
+                <p>📍São Paulo</p>
+                <p>☎ +5511980987698</p>
+                <p>📧 Email: info@SãoPaulo.go.ug</p>
+                <p>São Paulo</p>
+                <p>São Paulo, Brazil</p>
+            </div>
+            <div class="footer-middle">
+                <p><a href="https://github.com/Cadu1709">My Profile</a></p>
+            </div>
+            <div class="footer-right">
+                <h4>WDD 231 Class Project</h4>
+                <p>
+                    <span id="currentyear"></span> Carlos Silva
+                <p id="lastModified">last</p>
+            </div>
+        </footer>
+    </body>
+</html>

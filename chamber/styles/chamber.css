@@ -1,0 +1,362 @@
+/*start of css rules.*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1;
+    margin: 10px 0;
+    padding: 0.5rem;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    height: 100%;
+    margin: 8px 10px;
+}
+.profile {
+    flex: 1;
+    border: 4px solid grey;
+    border-radius: 8px;
+    max-width: fit-content;
+    max-height: fit-content;
+    margin-left: 8px;
+}
+.header-title {
+    flex: 1;
+    margin-left: 10px;
+}
+.header-title h1 {
+    font-weight: bold;
+}
+.menu {
+    flex-direction: row;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0.5rem;
+    margin-top: 105px;
+    text-align: center;
+    margin-right: 40px;
+    justify-content: space-around;
+    background-color: black;
+    width: fit-content;
+}
+nav ul li {
+    display: inline;
+    margin: 0 5px;
+    padding: 40px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+nav ul li a.active {
+    color: yellow;
+}
+nav ul li a:hover {
+    color: red;
+}
+.hero-container {
+    display: block;
+    margin: 8px 10px;
+    width: 100%;
+}
+.hero-container img {
+    display: flex;
+    width: 100%;
+    height: 600px;
+}
+.home h2 {
+    text-align: left;
+    margin-left: 20px;
+}
+.directory {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+.updates {
+    flex: 1;
+    text-align: left;
+    margin: 10px 10px;
+}
+.weatherd {
+    flex: 1;
+    text-align: center;
+    margin: 10px 10px;
+}
+.forecastd {
+    flex: 1;
+    text-align: right;
+    margin: 10px 10px;
+}
+button, input[type="submit"] {
+    padding: 12px;
+    margin: 10px;
+    border: 2px solid grey;
+    border-radius: 20px;
+    background-color: blanchedalmond;
+    color: blue;
+    font-weight: bold;
+ }
+ button:hover, input[type="submit"]:hover {
+     background-color: gray;
+     color: white;
+ 
+ }
+#members {
+   margin-left: 20px;
+   margin: 10px 10px;
+   padding: 10px;
+   width: 100%;
+   font-family: Arial, sans-serif;
+}
+/*Grid view styles*/
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+}
+/* List view styles */
+.list-view {
+    display: block;
+}
+
+.list-view section {
+    display: flex;
+    flex-direction: column;
+}
+#members section {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Styling for the members information */
+#members p {
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    margin: 5px 0;
+    color: #666;
+}
+#members img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+/*Styling the form and its elements*/
+.form-data {
+    width: 100%;
+    max-width: 600px; 
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+/* Style form labels and inputs */
+form {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+label {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Modal styling */
+#membershipModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 75%;
+    max-height: 70%;
+    overflow: auto;
+    z-index: 1000; /* places modal on top of other content */
+}
+
+#membershipModal h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#membershipModal div {
+    margin-bottom: 15px;
+}
+
+#membershipModal h3 {
+    margin-bottom: 5px;
+    color: #007bff; 
+}
+
+#membershipModal p {
+    color: #666;
+}
+/* Membership cards styling and animation*/
+.membership-card,.events {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+.membership-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.membership-card:nth-child(2), .events {
+    animation-delay: 0.4s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#membershipModal button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#membershipModal button:hover {
+    background-color: #0056b3;
+}
+/* Backdrop styling */
+#membershipModal::backdrop {
+    backdrop-filter: blur(5px); 
+    background-color: rgba(184, 204, 205, 0); 
+}
+#formData {
+    margin: 10px 10px;
+    padding: 4px;
+    margin-left: 10px;
+    width: 40%;
+    border: grey;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/*styling for discover page*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+    width: 100%;
+    padding: 10px;
+}
+.sidebar {
+    padding: 20px;
+    margin: 10px 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.main-content {
+    padding: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.demographics, .stats, .visit-message {
+    background-color: #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+figure {
+    width: calc(33.333% - 20px);/*30%;*/
+    margin: 10px;/*1%;*/
+    text-align: center;
+}
+.lazy {
+    display: block;
+}
+/*end of discover page styling*/
+main section h3 {
+    margin-top: 0;
+    margin-right: 10px;
+    text-align: center;
+    color: black;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: relative;
+}
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+.footer-middle a {
+    flex: 1;
+    text-align: center;
+    color: white;
+
+}
+.footer-middle img {
+    align-items: center;
+    height: 197px;
+    width: 90px;
+    padding: 4px;
+}
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
