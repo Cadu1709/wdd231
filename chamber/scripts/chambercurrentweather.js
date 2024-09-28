@@ -14,8 +14,8 @@ async function fetchWeatherData(url) {
 }
 
 function displayCurrentWeather(data) {
-    const weatherContainer = document.querySelector('#weather-icon'); // this is the container in my html with id weather-icon
-    weatherContainer.innerHTML = ''; // Clear previous content
+    const weatherContainer = document.querySelector('#weather-icon');
+    weatherContainer.innerHTML = '';
 
     const section = document.createElement('section');
     section.classList.add('current-weather');
@@ -28,14 +28,13 @@ function displayCurrentWeather(data) {
     const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     const desc = data.weather[0].description;
 
-    currentTemp.innerHTML = `Current Temperature: ${data.main.temp}&deg;C`;
-    weatherDesc.innerHTML = `The Weather Today is:  ${desc}`;
+    currentTemp.innerHTML = `Current Temperature: ${data.main.temp}&deg; Degrees`;
+    weatherDesc.innerHTML = `The Weather Today is: ${desc}`;
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
     weatherIcon.setAttribute('loading', 'lazy');
-    weatherIcon.setAttribute('width','60');
-    weatherIcon.setAttribute('height','70');
-    //captionDesc.textContent = `${desc}`;
+    weatherIcon.setAttribute('width', '60');
+    weatherIcon.setAttribute('height', '70');
 
     section.appendChild(currentTemp);
     section.appendChild(weatherDesc);
@@ -44,7 +43,6 @@ function displayCurrentWeather(data) {
 
     weatherContainer.appendChild(section);
 }
-
 
 function displaysaoPauloForecast(data) {
     const forecastContainer = document.querySelector('#forecast');
@@ -58,7 +56,7 @@ function displaysaoPauloForecast(data) {
             forecastCard.classList.add('forecast-card');
 
             const date = moment(day.dt_txt).format('MMMM Do, YYYY');
-            const temp = `${day.main.temp}&deg;C`;
+            const temp = `${day.main.temp}&deg; Degrees`;
             const icon = `https://openweathermap.org/img/w/${day.weather[0].icon}.png`;
             const desc = day.weather[0].description;
 
@@ -78,27 +76,25 @@ function displaysaoPauloForecast(data) {
 
 function displaysaoPauloTime() {
     const localTime = document.querySelector('#localTime');
-    const saoPauloTime = moment().tz("Africa/Kampala").format('HH:mm:ss');
-    localTime.textContent = `Local Time in saoPaulo: ${saoPauloTime}`;
+    const saoPauloTime = moment().tz("America/Sao_Paulo").format('HH:mm:ss');
+    localTime.textContent = `Local Time in São Paulo: ${saoPauloTime}`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchWeatherData(saoPauloCurrentWeatherUrl)
         .then(displayCurrentWeather)
-        .catch(error => console.error('Error fetching saoPaulo current weather data:', error));
+        .catch(error => console.error('Error fetching São Paulo current weather data:', error));
 
     fetchWeatherData(saoPauloForecastUrl)
         .then(displaysaoPauloForecast)
-        .catch(error => console.error('Error fetching saoPaulo forecast data:', error));
+        .catch(error => console.error('Error fetching São Paulo forecast data:', error));
 
     displaysaoPauloTime();
     setInterval(displaysaoPauloTime, 1000);
 
-    //set the join button to redirect you to join page.
-    document.getElementById('join').addEventListener("click",redirectJoin);
+    document.getElementById('join').addEventListener("click", redirectJoin);
 
-    //create function to redirect
     function redirectJoin() {
-        window.location.href = ("join.html")
+        window.location.href = "join.html";
     }
 });
