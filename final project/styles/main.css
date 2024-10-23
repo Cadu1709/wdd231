@@ -1,0 +1,326 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00008B;
+    color: white;
+    padding: 1em;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+nav {
+    margin-right: 70px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1em;
+    font-size: large;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav ul li a.active {
+    background-color: #4CAF50;
+    color:  black;
+
+}
+nav ul li a:hover {
+    background-color: #000;
+    color: white;
+}
+main {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
+.tabs button,#bookNowBtn, #searchButton,#search,#back,#learnMoreBtn{
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    width: 120px;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: #000;
+    transition: 0.6s;
+    cursor: pointer;
+}
+.tabs button:hover,#searchButton:hover,#search:hover,#learnMoreBtn:hover {
+    background-color: #00008B;
+    color: white;
+}
+.tabs {
+    overflow: hidden;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+.featured, .tabcontent h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+    max-width: 1200px;
+}
+select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: fit-content;
+    margin-top: 30px;
+}
+
+.featured div {
+    width: 70%;
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+.about p,.privacy p, .terms p, #game-parks p, .landing p {
+   margin: 0.5rem;
+   padding: 10px;
+   line-height: 40px; 
+   text-align: left;
+}
+/*styling of span*/
+#front {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInSlideUp 3s forwards;
+}
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Modal styling */
+#bookingModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    animation: fadeInUp 1s forwards;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 20%;
+    max-height: 70%;
+    overflow: auto;
+    z-index: 1000; /* places modal on top of other content */
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15px 10px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    transform: translateY(-20px);
+    animation: slideDown 0.5s forwards;
+}
+@keyframes slideDown {
+    from {transform: translateY(-10px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+.modal-content h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.modal-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+.modal-content li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.modal-content li h4 {
+    margin: 0;
+}
+.modal-content li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.modal-content li a:hover {
+    color: #0056b3;
+}
+.close {
+    height: fit-content;
+    width: 50px;
+    color: red;
+    float: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+#bookingModal h3, .about h2 {
+    margin-bottom: 10px;
+    color: #00008B;
+}
+#bookingModal div {
+    margin-top: 15px;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 2;
+        transform: translateY(1);
+    }
+}
+form {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+label {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    gap: 5px;
+    text-align: left;
+}
+input[type="text"],
+input[type="email"],
+select {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    width: 50%;
+    height: 35px;
+    margin-left: 50px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 6px;
+}
+
+#hotelResults {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hotel-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.hotel-card img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: fit-content;
+}
+
+.hotel-card h3 {
+    align-items: center;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.hotel-card p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+.promotional-banner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2em 0;
+    padding: 1em;
+    background-color: #f9f9f9;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: white;
+    padding: 1em;
+}
+
+.footer-left a, .footer-middle a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+}
+
+

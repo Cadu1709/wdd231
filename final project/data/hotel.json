@@ -1,0 +1,93 @@
+[
+    {
+      "name": "Water Front Hotel",
+      "city": "Madrid",
+      "country": "Spain",
+      "phone": " 0300-456-7890",
+      "price": "$48",
+      "image": "hotel11.webp"
+
+    },
+    {
+      "name": "Paradise Hotel",
+      "city": "Kampala",
+      "country": "Uganda",
+      "phone": "+256 0300-456-7890",
+      "price": "$58",
+      "image": "hotel1.webp"
+    },
+    {
+      "name": "Tourist Hotel",
+      "city": "Seychelles",
+      "country": "Seychelles",
+      "phone": "0300-456-7890",
+      "price": "$38",
+      "image": "hotel2.webp" 
+    },
+    {
+      "name": "Cabanna Resort Hotel",
+      "city": "Wakanda",
+      "country": "Ganda",
+      "phone": "+253 0300-456-7890",
+      "price": "$40",
+      "image": "hotel4.webp"
+    },
+    {
+      "name": "Mozart Hotel",
+      "city": "Rome",
+      "country": "Italy",
+      "phone": "+3 0300-456-7890",
+      "price": "$60",
+      "image": "hotel3.webp"
+    },
+    {
+      "name": "Abyss Hotel",
+      "city": "shacktar",
+      "country": "Nomand",
+      "phone": "300-456-7890",
+      "price": "$59",
+      "image": "hotel5.webp"
+    },
+    {
+      "name": "Palm waters",
+      "city": "Cedar",
+      "country": "US",
+      "phone": "+1 300-456-7890",
+      "price": "$148",
+      "image": "hotel6.webp"
+    },
+    {
+      "name": "Serena Hotel",
+      "city": "Nairobi",
+      "country": "Kenya",
+      "phone": "+256 0300-456-7890",
+      "price": "$428",
+      "image": "hotel7.webp"
+    },
+    {
+      "name": "Lakeview Hotel",
+      "city": "Viena",
+      "country": "Austria",
+      "phone": "+256 0300-456-7890",
+      "price": "$485",
+      "image": "hotel8.webp"
+    },
+    {
+      "name": "Ice palour Hotel",
+      "city": "Venice",
+      "country": "Italy",
+      "phone": "+256 0300-456-7890",
+      "price": "$28",
+      "image": "hotel9.webp"
+    },
+    {
+      "name": "Mwamba Hotel",
+      "city": "FortPortal",
+      "country": "Uganda",
+      "phone": "+256 0300-456-7890",
+      "price": "$48",
+      "image": "ecolodge.webp"
+    }
+
+  ]
+  

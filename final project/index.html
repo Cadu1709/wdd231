@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title content="TravelBuddy">TravelBuddy</title>
+    <meta name="author" content="Carlos Silva">
+    <meta name="description" content="Carlos Silva,TravelBuddy">
+    <meta property="og:image" content="https://www.cadu1709.github.io/wdd231/finalproject/images/logo.webp/">
+    <meta property="og:url" content="https://cadu1709.github.io/wdd231/finalproject/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Carlos Silva, WDD 231 - finalproject">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/small-view.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/main.js"></script>
+    <script defer src="scripts/form.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    
+    
+    
+</head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1>TravelBuddy✈️</h1>
+            </div>
+            <div class="menu">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="index.html" class="active"> Home </a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="mybookings.html">My Bookings</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <div class="search-bar">
+                <div class="tabs">
+                    <button class="tablinks" onclick="openTab(event, 'flights')">Flights</button>
+                    <button class="tablinks" onclick="openTab(event, 'hotels')">Hotels</button>
+                    <button class="tablinks" onclick="openTab(event, 'weather')">Current Weather</button>
+                    <button class="tablinks" onclick="openTab(event, 'game-parks')">Game Parks</button>
+                </div>
+            </div>
+    
+            <section class="featured">
+                <div id="flights" class="tabcontent">
+                    <h2>Featured Flights</h2>
+                    <!-- Add featured flights here -->
+                    <form id="flightSearchForm">
+                        <fieldset>
+                            <legend>Flight Details:</legend>
+                            <label>From (IATA CODE):
+                                <input type="text" id="origin" name="origin" pattern="[A-Z]{3}" required>
+                                <div id="originSuggestions" class="suggestions"></div>
+                            </label>
+                            
+                
+                            <label>To (IATA CODE):
+                                <input type="text" id="destination" name="destination" pattern="[A-Z]{3}" required>
+                                <div id="destinationSuggestions" class="suggestions"></div>
+                            </label>
+                            
+                    
+                            <label>Departure Date (YYYY-MM-DD):
+                                <input type="date" id="departureDate" name="departureDate" required>
+                            </label>
+                    
+                            <label>Return Date (YYYY-MM-DD):
+                                <input type="date" id="returnDate" name="returnDate">
+                            </label>
+
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend>Traveller Information:</legend>
+                            <label>Adults:
+                                <input type="number" id="adults" name="adults" min="1" max="9" value="1" required>
+                            </label>
+                    
+                            <label>Children:
+                                <input type="number" id="children" name="children" min="0" max="9" value="0">
+                            </label>
+                    
+                            <label>Infants:
+                                <input type="number" id="infants" name="infants" min="0" max="9" value="0">
+                            </label>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend>Travel Class:</legend>
+                            <label>Travel Class:
+                                <select id="travelClass" name="travelClass" required>
+                                    <option value="">Any</option>
+                                    <option value="ECONOMY">Economy</option>
+                                    <option value="PREMIUM_ECONOMY">Premium Economy</option>
+                                    <option value="BUSINESS">Business</option>
+                                    <option value="FIRST">First</option>
+                                </select>
+                            </label><br>
+                            <label>Price:
+                                <input type="text" id="price" name="price" placeholder="enter only digits, do not add dollar symbol" required>
+                            </label>
+
+                            <label>Airline Codes (comma-separated):
+                                <select id="airlineCodes" name="AirlineCodes" pattern="[0-9A-Z,]{2,}" required>
+                                    <option value="A8* Aerolink Uganda">A8*-Aerolink Uganda</option>
+                                    <option value="UR Uganda National Airline Company">UR-Uganda National Airline Co</option>
+                                    <option value="TC Air Tanzania">TC-Air Tanzania</option>
+                                    <option value="KQ Kenya Airways">KQ-Kenya Airways</option>
+                                    <option value="XO South East Asian Airlines">XO-South East Asian Airlines</option>
+                                    <option value="SA South African Airways">SA-South African Airways</option>
+                                    <option value="BA British Airways">BA-British Airways</option>
+                                    <option value="A0 BA Euroflyer Limited dba British Airways">A0-BA Euroflyer Limited dba British Airways</option>
+                                    <option value="TK Turkish Airlines Inc.">TK-Turkish Airlines Inc.</option>
+                                    <option value="ZQ German Airways GmbH & Co.KG">ZQ-German Airways GmbH & Co.KG</option>
+                                    <option value="EX Regional Express Americas SAS">EX-Regional Express Americas SAS</option>
+                                    <option value="V1 IBS Software Services Americas, Inc">V1-IBS Software Services Americas, Inc</option>
+                                </select>
+                            </label>
+                        </fieldset>
+                        <button type="submit" id="search">Search Flights</button>
+                    </form>
+                    <div id="flightResults"></div>
+                </div>
+                <div id="hotels" class="tabcontent">
+                    <h2>Featured Hotels</h2>
+                    <form id="hotelSearchForm">
+                        <label>Country:
+                            <input type="text" id="country" name="country" placeholder="Enter country">
+                        </label>
+    
+                        <label>City:
+                            <input type="text" id="city" name="city" placeholder="Choose from Nairobi, Kampala, Madrid, Venice etc.">
+                        </label>
+    
+                        <label>Max Price:
+                            <input type="text" id="price" name="price" placeholder="Enter max price">
+                        </label>
+    
+                        <button type="button" id="searchButton">Search</button>
+                    </form>
+                    <div id="hotelResults"></div>
+
+                </div>
+                <div id="weather" class="tabcontent">
+                    
+                </div>
+                <div id="game-parks" class="tabcontent">
+                    <h2>Featured Game Parks</h2>
+                    <p>
+                        Africa is renowned for its rich biodiversity and stunning landscapes, offering some of the most extraordinary wildlife experiences on the planet. From the vast savannas of the Serengeti to the lush rainforests of the Congo Basin, the continent is a haven for nature enthusiasts and adventure seekers. In particular, Uganda, known as the "Pearl of Africa," boasts an impressive array of national parks and game reserves. Here, you can witness the majestic mountain gorillas in Bwindi Impenetrable National Park, embark on a safari in Queen Elizabeth National Park, or cruise along the Nile River in Murchison Falls National Park.
+
+                        Uganda's diverse ecosystems provide habitats for an incredible variety of wildlife, including elephants, lions, leopards, giraffes, and countless bird species. The country's commitment to conservation and eco-tourism ensures that these natural treasures are preserved for future generations while offering visitors unforgettable experiences. Whether you're trekking through dense forests, exploring savannas, or relaxing by tranquil lakes, Uganda's game parks promise an adventure of a lifetime. 
+                    </p>
+                    <button id="learnMoreBtn">Learn More About Game Parks</button>
+                    <div id="gameParksModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">Close &times;</span>
+                            <h3>Explore Some Game Parks</h3>
+                            <ul>
+                                <li>
+                                    <h4>Bwindi Impenetrable National Park</h4>
+                                    <a href="https://www.ugandawildlife.org/bwindi-impenetrable-national-park" target="_blank">Visit Site</a>
+                                </li>
+                                <li>
+                                    <h4>Queen Elizabeth National Park</h4>
+                                    <a href="https://www.ugandawildlife.org/queen-elizabeth-national-park" target="_blank">Visit Site</a>
+                                </li>
+                                <li>
+                                    <h4>Murchison Falls National Park</h4>
+                                    <a href="https://www.ugandawildlife.org/murchison-falls-national-park" target="_blank">Visit Site</a>
+                                </li>
+                                <li>
+                                    <h4>Kidepo Valley National Park</h4>
+                                    <a href="https://www.ugandawildlife.org/kidepo-valley-national-park" target="_blank">Visit Site</a>
+                                </li>
+                                <li>
+                                    <h4>Lake Mburo National Park</h4>
+                                    <a href="https://www.ugandawildlife.org/lake-mburo-national-park" target="_blank">Visit Site</a>
+                                </li>
+                                <li>
+                                    <h4>Mgahinga Gorilla National Park</h4>
+                                    <a href="https://www.ugandawildlife.org/mgahinga-gorilla-national-park" target="_blank">Visit Site</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="landing">
+                    <p>
+                        The world is calling, get your bags and get ready to travel with TravelBuddy. We got you covered With the cheapest tickets around the world.
+                        Whether you're planning a weekend getaway or a dream vacation, TravelBuddy is here to make your travel experience seamless and memorable.
+                        With a wide range of options and competitive prices, we strive to cater to all your travel needs and preferences. Our user-friendly interface and expert recommendations ensure that you find the perfect accommodation and flights for your next adventure.
+                        
+                    </p>
+                    <span id="front">Select any of the options(Flight, Hotels or Game parks) to start your search</span>
+                </div>
+                
+            </section>
+           
+        </main>
+        <footer>
+            <div class="footer-left">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="privacy.html">Terms of Service</a>
+            </div>
+            <div class="footer-middle">
+                <p><a href="https://github.com/Cadu1709">My Profile</a></p>    
+            </div>
+            <div class="footer-right">
+                <h4>WDD 231 Final Project</h4>
+                <p>
+                    <span id="currentyear"></span> Carlos Silva
+                </p>
+                <p id="lastModified">last</p>
+            </div>
+        </footer>
+     
+    </body>
+</html>

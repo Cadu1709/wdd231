@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title content="TravelBuddy">TravelBuddy</title>
+    <meta name="author" content="Carlos Silva">
+    <meta name="description" content="Carlos Silva, TravelBuddy">
+    <meta property="og:image" content="https://www.cadu1709.github.io/wdd231/finalproject/images/logo.webp/">
+    <meta property="og:url" content="https://cadu1709.github.io/wdd231/finalproject/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Carlos Silva, WDD 231 - finalproject">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/small-view.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/form1.js"></script>
+    
+</head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1>TravelBuddy✈️</h1>
+            </div>
+            <div class="menu">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="index.html"> Home </a></li>
+                        <li><a href="about.html" class="active">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="mybookings.html">My Bookings</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="featured">
+                <div class="about">
+                    <h2>About Travelmate</h2>
+                    <p>Welcome to Travelmate, your ultimate destination for finding the best deals on hotels, flights, and vacations. Whether you're planning a weekend getaway or a dream vacation, Travelmate is here to make your travel experience seamless and memorable.</p>
+                    <p>With a wide range of options and competitive prices, we strive to cater to all your travel needs and preferences. Our user-friendly interface and expert recommendations ensure that you find the perfect accommodation and flights for your next adventure.</p>
+                    
+                    <!-- Modal for Booking Services -->
+                    <button id="bookNowBtn">Book Now</button>
+                    <div id="bookingModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">Close &times;</span>
+                            <h3>Book Your Services</h3>
+                            <form action="mybookings.html" method="get">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" placeholder="Enter Full Name" required>
+                                
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                
+                                <label for="service">Select Service:</label>
+                                <select id="service" name="service">
+                                    <option value="hotels">Hotels</option>
+                                    <option value="flights">Flights</option>
+                                    <option value="vacations">Vacations</option>
+                                </select>
+                                
+                                <input type="submit" value="submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>  
+        <footer>
+            <div class="footer-left">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="privacy.html">Terms of Service</a>
+            </div>
+            <div class="footer-middle">
+                <p><a href="https://github.com/Cadu1709">My Profile</a></p>    
+            </div>
+            <div class="footer-right">
+                <h4>WDD 231 Final Project</h4>
+                <p>
+                    <span id="currentyear"></span> Carlos Silva
+                </p>
+                <p id="lastModified">last</p>
+            </div>
+        </footer>
+        
+    </body>
+</html>
